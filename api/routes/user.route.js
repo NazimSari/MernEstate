@@ -1,4 +1,4 @@
-import exress from "express";
+import express from "express";
 import {
   deleteUser,
   test,
@@ -6,7 +6,7 @@ import {
 } from "../controllers/user.controller.js";
 import { verifyToken } from "../utils/verifyUser.js";
 
-const router = exress.Router();
+const router = express.Router();
 
 router.get("/test", test);
 router.post("/update/:id", verifyToken, updateUser);
