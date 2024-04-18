@@ -118,6 +118,7 @@ const CreateListing = () => {
       });
     }
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -265,7 +266,6 @@ const CreateListing = () => {
                 type="number"
                 id="regularPrice"
                 min="50"
-                max=""
                 required
                 className="p-3 border border-gray-300 rounded-lg"
                 onChange={handleChange}
@@ -273,9 +273,7 @@ const CreateListing = () => {
               />
               <div className="flex flex-col items-start">
                 <p>Regular Price</p>
-                {formData.type === "rent" && (
-                  <span className="text-xs">($ / month)</span>
-                )}
+                <span className="text-xs">($ / month)</span>
               </div>
             </div>
             {formData.offer && (
@@ -292,9 +290,7 @@ const CreateListing = () => {
                 />
                 <div className="flex flex-col items-start">
                   <p>Discounted Price</p>
-                  {formData.type === "rent" && (
-                    <span className="text-xs">($ / month)</span>
-                  )}
+                  <span className="text-xs">($ / month)</span>
                 </div>
               </div>
             )}
